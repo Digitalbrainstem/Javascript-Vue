@@ -3,12 +3,20 @@
 	"name": "Javascript Vue",
 	"injectionSelector": "L:string.template.js",
 	"patterns": [
+		
 		{
-			"include": "text.html.basic"
+			"include": "#vue-tag"
 		}
 	],
 	"repository": {
-		
+		"vue-tag":{
+			"name": "source.vue",
+			"patterns": [
+				{
+					"include": "text.html.vue-html"
+				}
+			]
+		}
 	},
 	"scopeName": "vuesource.js"
 }

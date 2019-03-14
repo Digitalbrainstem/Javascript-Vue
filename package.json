@@ -7,6 +7,9 @@
     "engines": {
         "vscode": "^1.32.0"
     },
+    "extensionDependencies"	: [
+        "octref.vetur"
+    ],
     "categories": [
         "Languages"
     ],
@@ -14,7 +17,24 @@
         "grammars": [{
             "scopeName": "vuesource.js",
             "path": "./syntaxes/javascript-vue.tmLanguage.json",
-            "injectTo": ["source.js"]
+            "injectTo": ["source.js"],
+            "embeddedLanguages": {
+                "text.html.basic": "html",
+                "text.html.vue-html": "vue-html",
+                "source.css": "css",
+                "source.css.scss": "scss",
+                "source.css.less": "less",
+                "source.css.postcss": "postcss",
+                "source.sass": "sass",
+                "source.stylus": "stylus",
+                "source.js": "javascript",
+                "source.ts": "typescript",
+                "source.coffee": "coffeescript",
+                "text.html.markdown": "md",
+                "source.yaml": "yaml",
+                "source.json": "json",
+                "source.graphql": "graphql"
+              }
         }]
     }
 }
