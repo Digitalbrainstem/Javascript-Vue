@@ -1,0 +1,20 @@
+{
+    "name": "javascript-vue",
+    "displayName": "Javascript Vue",
+    "description": "Provide vue syntax within javascript files",
+    "version": "0.0.1",
+    "publisher": "DigitalBrainstem",
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "grammars": [{
+            "scopeName": "vuesource.js",
+            "path": "./syntaxes/javascript-vue.tmLanguage.json",
+            "injectTo": ["source.js"]
+        }]
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Javascript Vue",
+	"injectionSelector": "L:string.template.js",
+	"patterns": [
+		{
+			"include": "text.html.basic"
+		}
+	],
+	"repository": {
+		
+	},
+	"scopeName": "vuesource.js"
+}
