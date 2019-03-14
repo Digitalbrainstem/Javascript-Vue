@@ -8,6 +8,10 @@ Syntax highlighting for Javascript Vue files.
 
 This provides vue syntax inside template fields. Templates no longer look like strings!
 
+Once installed, this will instantly work on all javascript files.
+
+*Note: Only works when language is set to Javascript.*
+
 If there is anything that I missed or features you would like this to include. [Let me know](https://github.com/Digitalbrainstem/javascript-vue/issues)
 
 *NOTE: This is in early development; though, I do not see any issues so far. If you find some, report them!*
