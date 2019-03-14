@@ -2,8 +2,13 @@
     "name": "javascript-vue",
     "displayName": "Javascript Vue",
     "description": "Provide vue syntax within javascript files",
-    "version": "0.0.1",
+    "version": "0.1.0",
+    "license": "MIT",
     "publisher": "DigitalBrainstem",
+    "author": {
+		"name": "Derek Thomas",
+		"email": "Derek@digitalbrainstem.com"
+	},
     "engines": {
         "vscode": "^1.32.0"
     },
@@ -16,7 +21,7 @@
     "contributes": {
         "grammars": [{
             "scopeName": "vuesource.js",
-            "path": "./syntaxes/javascript-vue.tmLanguage.json",
+            "path": "./syntaxes/javascript-vue.json",
             "injectTo": ["source.js"],
             "embeddedLanguages": {
                 "text.html.basic": "html",
