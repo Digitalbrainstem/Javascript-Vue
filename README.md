@@ -1,3 +1,7 @@
+[![Visual&nbsp;Studio Marketplace](https://img.shields.io/visual-studio-marketplace/v/DigitalBrainstem.javascript-vue.svg?label=Visual%20Studio%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=DigitalBrainstem.javascript-vue)
+[![License](https://img.shields.io/github/license/Digitalbrainstem/javascript-vue.svg)](https://github.com/Digitalbrainstem/javascript-vue/blob/master/LICENSE)
+
+
 # Javascript Vue Language Support #
 
 Syntax highlighting for Javascript Vue files.
