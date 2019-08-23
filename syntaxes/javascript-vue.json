@@ -1,22 +1,35 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Javascript Vue",
-	"injectionSelector": "L:string.template.js",
+	"injectionSelector": "L:source.js",
 	"patterns": [
 		
 		{
 			"include": "#vue-tag"
 		}
+
 	],
 	"repository": {
 		"vue-tag":{
-			"name": "source.vue",
+			"name": "javascript.vue.block",
 			"patterns": [
 				{
+					"begin": "(<template>)+.*(</template>)?",
+					"end": "(\\s?)(</template>)",
+					"name": "vue.template",
+					"captures": { "0": { "name": "vue.template.block"}},
+					"patterns": [
+						{ "include": "text.html.vue-html"}
+					]
+				},
+				{
+
 					"include": "text.html.vue-html"
+
 				}
+				
 			]
 		}
 	},
-	"scopeName": "vuesource.js"
+	"scopeName": "javascript.vue.codeblock"
 }
