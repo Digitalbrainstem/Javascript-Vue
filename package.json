@@ -39,6 +39,14 @@
 				}
 			}
 		]
+    },
+    "bugs": {
+		"url": "https://github.com/Digitalbrainstem/Javascript-Vue/issues",
+		"email": "help@digitalbrainstem.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Digitalbrainstem/Javascript-Vue.git"
 	},
 	"__metadata": {
 		"id": "0ac3188b-35bb-4123-88f8-2fa4a8d070dc",
