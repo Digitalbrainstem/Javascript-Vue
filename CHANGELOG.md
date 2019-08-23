@@ -1,7 +1,9 @@
-# Change Log
-All notable changes to the "javascript-vue" extension will be documented in this file.
+# Change Log #
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## master ##
 
-## [Unreleased]
+- Added support for vue's `<template>`
+
+## [Unreleased] ##
+
 - Initial release
