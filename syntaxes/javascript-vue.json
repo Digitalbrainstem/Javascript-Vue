@@ -43,6 +43,6 @@
 					"include": "text.html.vue-html"
 				}
 			]
-		},
+		}
 	}
 }
