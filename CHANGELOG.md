@@ -1,5 +1,9 @@
 # Change Log #
 
+## 0.3.1
+
+- Fix naming of for top level objects
+
 ## 0.3.0
 
 - Removed support for vue's `<template>` (Caused issue's with other vue properties)

@@ -12,7 +12,7 @@
 			"include": "#keywords-functions"
 		},
 		{
-			"include": "#vkeywords-object"
+			"include": "#keywords-object"
 		}
 
 
@@ -53,7 +53,7 @@
 		},
 		"keywords-functions":{
 			"name":"vue.keyword",
-			"match": "((props)|(computed)|(template)|(watch)|(methods)|(data)|(beforeMount)|(mounted))\\s*(?=(:\\s*(function)))",
+			"match": "((props)|(computed)|(template)|(watch)|(methods)|(data)|(beforeMount)|(mounted))\\s*(?=(:(function)))",
 			"captures": {
 				"1":{
 					"name":"entity.name.function.js"
