@@ -2,6 +2,10 @@
 
 ## 0.3.1
 
+- Fix top level function colorization.
+
+## 0.3.1
+
 - Fix naming of for top level objects
 
 ## 0.3.0
