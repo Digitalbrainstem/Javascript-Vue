@@ -5,29 +5,25 @@
 	"patterns": [
 		
 		{
-			"include": "#vue-tag"
+			"include": "#vue-tag1"
 		}
 
 	],
 	"repository": {
-		"vue-tag":{
-			"name": "javascript.vue.block",
+		"vue-tag1":{
+			"name":"vue-html",
+			"contentName":"vue-html",
+			"begin": "(template:)\\s*`",
+			"beginCaptures": {
+				"1":{
+					"name":"vue-template"
+				}
+			},
+			"end": "`",
 			"patterns": [
 				{
-					"begin": "(<template>)+.*(</template>)?",
-					"end": "(\\s?)(</template>)",
-					"name": "vue.template",
-					"captures": { "0": { "name": "vue.template.block"}},
-					"patterns": [
-						{ "include": "text.html.vue-html"}
-					]
-				},
-				{
-
 					"include": "text.html.vue-html"
-
 				}
-				
 			]
 		}
 	},
