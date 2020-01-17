@@ -7,7 +7,14 @@
 		
 		{
 			"include": "#vue-tag1"
+		},
+		{
+			"include": "#keywords-functions"
+		},
+		{
+			"include": "#vkeywords-object"
 		}
+
 
 	],
 	"repository": {
@@ -43,6 +50,24 @@
 					"include": "text.html.vue-html"
 				}
 			]
-		}
+		},
+		"keywords-functions":{
+			"name":"vue.keyword",
+			"match": "((props)|(computed)|(template)|(watch)|(methods)|(data)|(beforeMount)|(mounted))\\s*(?=(:\\s*(function)))",
+			"captures": {
+				"1":{
+					"name":"entity.name.function.js"
+				}
+			}
+		},
+		"keywords-object":{
+			"name":"vue.keyword2",
+			"match": "((props)|(computed)|(template)|(watch)|(methods)|(data)|(beforeMount)|(mounted))\\s*(:)",
+			"captures": {
+				"1":{
+					"name":"variable.other.object.js"
+				}
+			}
+		},
 	}
 }
