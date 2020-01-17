@@ -2,7 +2,7 @@
 	"name": "javascript-vue",
 	"displayName": "Javascript Vue",
 	"description": "Provide vue syntax within javascript files",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"license": "MIT",
 	"icon": "asset/vue.png",
 	"keywords": [
