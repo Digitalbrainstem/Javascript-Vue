@@ -1,6 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Javascript Vue",
+	"scopeName": "javascript.vue.codeblock",
 	"injectionSelector": "L:source.js",
 	"patterns": [
 		
@@ -13,19 +14,35 @@
 		"vue-tag1":{
 			"name":"vue-html",
 			"contentName":"vue-html",
-			"begin": "(template:)\\s*`",
+			"begin": "((template)\\s*:)(\\s*(`))",
 			"beginCaptures": {
 				"1":{
 					"name":"vue-template"
+				},
+				"2":{
+					"name":"variable.other.object.js"
+				},
+				"3":{
+					"name":"string.template.js"
+				},
+				"4":{
+					"name":"punctuation.definition.string.template.begin.js"
 				}
 			},
-			"end": "`",
+			"end": "((`))",
+			"endCaptures": {
+				"1":{
+					"name":"string.template.js"
+				},
+				"2":{
+					"name":"punctuation.definition.string.template.end.js"
+				}
+			},
 			"patterns": [
 				{
 					"include": "text.html.vue-html"
 				}
 			]
-		}
-	},
-	"scopeName": "javascript.vue.codeblock"
+		},
+	}
 }
