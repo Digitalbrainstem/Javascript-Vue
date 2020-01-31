@@ -23,7 +23,7 @@
 		"octref.vetur"
 	],
 	"categories": [
-		"Languages"
+		"Programming Languages"
 	],
 	"contributes": {
 		"grammars": [
@@ -32,11 +32,7 @@
 				"path": "./syntaxes/javascript-vue.json",
 				"injectTo": [
 					"source.js"
-				],
-				"embeddedLanguages": {
-					"meta.embedded.block.vue": "vue-html",
-					"text.html.basic": "html"
-				}
+				]
 			}
 		]
     },

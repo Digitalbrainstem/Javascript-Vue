@@ -4,70 +4,141 @@
 	"scopeName": "javascript.vue.codeblock",
 	"injectionSelector": "L:source.js",
 	"patterns": [
-		
 		{
 			"include": "#vue-tag1"
 		},
 		{
-			"include": "#keywords-functions"
-		},
-		{
-			"include": "#keywords-object"
+			"include": "#vue-tag2"
 		}
-
-
 	],
 	"repository": {
 		"vue-tag1":{
-			"name":"vue-html",
-			"contentName":"vue-html",
-			"begin": "((template)\\s*:)(\\s*(`))",
+			"begin": "((template\\s*(:))\\s*((`)))",
 			"beginCaptures": {
 				"1":{
-					"name":"vue-template"
+					"name":"meta.object.member.js"
 				},
 				"2":{
-					"name":"variable.other.object.js"
+					"name":"meta.object-literal.key.js"
 				},
 				"3":{
-					"name":"string.template.js"
+					"name":"punctuation.separator.key-value.js"
 				},
 				"4":{
+					"name":"string.template.js"
+				},
+				"5":{
 					"name":"punctuation.definition.string.template.begin.js"
 				}
 			},
-			"end": "((`))",
+			"end": "(((`)))",
 			"endCaptures": {
 				"1":{
-					"name":"string.template.js"
+					"name":"meta.object.member.js"
 				},
 				"2":{
+					"name":"string.template.js"
+				},
+				"3":{
 					"name":"punctuation.definition.string.template.end.js"
 				}
 			},
 			"patterns": [
 				{
 					"include": "text.html.vue-html"
+				},
+				{
+					"include": "#template-literal-interpolation"
 				}
 			]
 		},
-		"keywords-functions":{
-			"name":"vue.keyword",
-			"match": "((props)|(computed)|(template)|(watch)|(methods)|(data)|(beforeMount)|(mounted))\\s*(?=(:\\s*(function)))",
-			"captures": {
+		"vue-tag2":{
+			"begin": "((template\\s*(:))\\s*([\\p{L}\\p{N}.]+\\s*\\x28)\\s*((`)))",
+			"beginCaptures": {
 				"1":{
-					"name":"entity.name.function.js"
+					"name":"meta.object.member.js"
+				},
+				"2":{
+					"name":"meta.object-literal.key.js"
+				},
+				"3":{
+					"name":"punctuation.separator.key-value.js"
+				},
+				"4":{
+					"name":"meta.object.member.js",
+					"patterns": [
+						{
+							"include": "source.js"
+						}
+					]
+				},
+				"5":{
+					"name":"string.template.js"
+				},
+				"6":{
+					"name":"punctuation.definition.string.template.begin.js"
 				}
-			}
+			},
+			"end": "(((`))\\s*(\\x29))",
+			"endCaptures": {
+				"1":{
+					"name":"meta.object.member.js"
+				},
+				"2":{
+					"name":"string.template.js"
+				},
+				"3":{
+					"name":"punctuation.definition.string.template.end.js"
+				},
+				"4":{
+					"name":"meta.brace.round.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "text.html.vue-html"
+				},
+				{
+					"include": "#template-literal-interpolation"
+				}
+			]
 		},
-		"keywords-object":{
-			"name":"vue.keyword2",
-			"match": "((props)|(computed)|(template)|(watch)|(methods)|(data)|(beforeMount)|(mounted))\\s*(:)",
-			"captures": {
+		"template-literal-interpolation":{
+			"begin": "((((\\$\\{))))",
+			"beginCaptures": {
 				"1":{
-					"name":"variable.other.object.js"
+					"name":"meta.object.member.js"
+				},
+				"2":{
+					"name":"string.template.js"
+				},
+				"3":{
+					"name":"meta.template.expression.js"
+				},
+				"4":{
+					"name":"punctuation.definition.template-expression.begin.js"
 				}
-			}
+			},
+			"end": "((((\\}))))",
+			"endCaptures": {
+				"1":{
+					"name":"meta.object.member.js"
+				},
+				"2":{
+					"name":"string.template.js"
+				},
+				"3":{
+					"name":"meta.template.expression.js"
+				},
+				"4":{
+					"name":"punctuation.definition.template-expression.end.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "source.js"
+				}
+			]
 		}
 	}
 }
